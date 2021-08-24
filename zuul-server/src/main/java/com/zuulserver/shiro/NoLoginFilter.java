@@ -37,7 +37,7 @@ public class NoLoginFilter extends FormAuthenticationFilter {
 
         Serializable SessionId = sessionManager.getSessionId(request, response);
 
-        Session kickoutSession= redisSessionDao.getKickoutSession(SessionId);
+        Session kickoutSession = redisSessionDao.getKickoutSession(SessionId);
 
         httpServletResponse.setCharacterEncoding("UTF-8");
         httpServletResponse.setContentType("text/json");

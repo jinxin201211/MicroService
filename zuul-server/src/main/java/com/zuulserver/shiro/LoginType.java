@@ -9,7 +9,8 @@ public enum LoginType {
     private LoginType(String code) {
         this.code = code;
     }
-    public String getCode () {
+
+    public String getCode() {
         return code;
     }
 }

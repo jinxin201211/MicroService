@@ -73,36 +73,6 @@ public class UpdatePermsUtil {
 
         filterMap.put("/login", "anon");
 
-        //状态
-        filterMap.put("/actuator/**", "anon");
-
-        //登录
-        filterMap.put("/sysUser/login", "anon");
-        filterMap.put("/sysUser/fromZfgfh", "anon");
-        //TF卡登录
-        filterMap.put("/sysUser/tfcard_login", "anon");
-        //fromZfgfh
-        filterMap.put("/sysUser/fromZfgfh", "anon");
-        //测试
-        filterMap.put("/test", "anon");
-        //获取app版本信息
-        filterMap.put("/appcommon/appVersion/getVersion", "anon");
-        //下载app升级包
-        filterMap.put("/gridfs/file/downloadApp", "anon");
-        //上传日志文件
-        filterMap.put("/gridfs/file/uploadLog", "anon");
-        //上传日志信息
-        filterMap.put("/appcommon/appLog/add", "anon");
-        //上传gps信息
-        filterMap.put("/appcommon/appgps/add", "anon");
-        filterMap.put("/gps/appgps/add", "anon");
-        //上传img_fs
-        //filterMap.put("/img_fs/img/upload", "anon");
-        //下载img_fs上的文件
-//        filterMap.put("/img_fs/img/download", "anon");
-        //img_fs服务测试
-        filterMap.put("/img_fs/img/test", "anon");
-
         for (Permissions item : sysMenus) {
             filterMap.put("/" + item.getPermissionsName(), "perms[/" + item.getPermissionsName() + "]");
         }

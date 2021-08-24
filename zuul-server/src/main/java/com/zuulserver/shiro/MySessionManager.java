@@ -36,10 +36,10 @@ public class MySessionManager extends DefaultWebSessionManager {
         //cookie中获取一次
         if (stardonToken == null) {
             HttpServletRequest httpRequest = (HttpServletRequest) request;
-            Cookie[] cookies =  httpRequest.getCookies();
-            if(cookies != null){
-                for(Cookie cookie : cookies){
-                    if(cookie.getName().equals("stardon-token")){
+            Cookie[] cookies = httpRequest.getCookies();
+            if (cookies != null) {
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals("stardon-token")) {
                         return cookie.getValue();
                     }
                 }
